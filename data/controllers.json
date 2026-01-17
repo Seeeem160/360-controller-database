@@ -1,190 +1,393 @@
 [
   {
-    "id": "white-wireless-2005",
-    "name": "Wireless Controller – White",
+    "id": "white-silver-trim-2005",
+    "name": "Dark-Silver trim - White Wireless Controller",
     "category": "Retail",
     "rarity": "Common",
     "release_year": 2005,
-    "regions": ["NA", "EU", "JP"],
+    "regions": [
+      "Worldwide"
+    ],
     "connection": "Wireless",
-    "colors": ["White"],
-    "shell_finish": "Matte",
-    "part_numbers": ["X810648-001"],
-    "serial_notes": "Early launch units have larger serial font.",
-    "box_variants": [
-      "Launch retail box",
-      "Later retail box"
+    "colors": [
+      "White",
+      "Dark Silver"
     ],
+    "shell_finish": "Matte/Glossy",
+    "part_numbers": [
+      "X801769-004",
+      "X801769-006",
+      "X806498-003"
+    ],
+    "release_date": "Nov. 22nd, 2005",
+    "retail_price": "$49.99",
+    "collector_notes": "The very first wireless controller released. Features a glossy dark-silver trim instead of the later matte grey.",
+    "images": [],
     "authentication": [
-      "Matte white shell, never glossy",
-      "Embossed Microsoft logo is clean and centered",
-      "Rear label font is thin and evenly spaced"
-    ],
-    "known_fakes": true,
-    "collector_notes": "Most common Xbox 360 controller. Early units feel slightly heavier.",
-    "images": []
+      "Check for glossy dark-silver trim",
+      "Verify part number ends in -004 or -006"
+    ]
   },
   {
-    "id": "black-wireless-2006",
-    "name": "Wireless Controller – Black",
+    "id": "white-grey-wireless-2005",
+    "name": "White/Grey Wireless Controller",
     "category": "Retail",
     "rarity": "Common",
-    "release_year": 2006,
-    "regions": ["NA", "EU", "JP"],
+    "release_year": 2005,
+    "regions": [
+      "Worldwide"
+    ],
     "connection": "Wireless",
-    "colors": ["Black"],
+    "colors": [
+      "White",
+      "Grey"
+    ],
     "shell_finish": "Matte",
-    "part_numbers": ["X811903-001"],
-    "serial_notes": "Serial font standardized after 2006.",
-    "box_variants": [
-      "Retail black box"
+    "part_numbers": [
+      "X807968-001",
+      "X809478-001",
+      "X801769-007",
+      "X801769-009",
+      "X801769-011",
+      "X801769-018",
+      "X801769-020"
     ],
+    "release_date": "Nov. 22nd, 2005",
+    "retail_price": "$49.99",
+    "collector_notes": "The standard original release controller with matte grey accents.",
+    "images": [],
     "authentication": [
-      "Deep matte black shell",
-      "Triggers have consistent spring resistance",
-      "Battery compartment plastic is slightly textured"
-    ],
-    "known_fakes": true,
-    "collector_notes": "Second most common retail controller.",
-    "images": []
+      "Matte grey bottom trim",
+      "Microsoft engraved on top trim"
+    ]
   },
   {
-    "id": "play-charge-black",
-    "name": "Wireless Controller – Black (Play & Charge Bundle)",
+    "id": "elite-black-wireless-2007",
+    "name": "Elite Black Wireless Controller",
+    "category": "Retail",
+    "rarity": "Common",
+    "release_year": 2007,
+    "regions": [
+      "Worldwide"
+    ],
+    "connection": "Wireless",
+    "colors": [
+      "Black",
+      "Grey"
+    ],
+    "shell_finish": "Matte",
+    "part_numbers": [
+      "X801769-014",
+      "X801769-016",
+      "X801769-022",
+      "X801769-026",
+      "X801769-086"
+    ],
+    "release_date": "Apr. 29, 2007",
+    "retail_price": "$49.99",
+    "collector_notes": "Released alongside the Xbox 360 Elite console. First major color variation.",
+    "images": [],
+    "authentication": [
+      "Matte black shell",
+      "Grey thumbsticks and d-pad"
+    ]
+  },
+  {
+    "id": "halo-3-spartan-2007",
+    "name": "Halo 3 Spartan Limited Edition Wireless Controller",
     "category": "Retail",
     "rarity": "Uncommon",
     "release_year": 2007,
-    "regions": ["NA", "EU"],
+    "regions": [
+      "Worldwide"
+    ],
     "connection": "Wireless",
-    "colors": ["Black"],
+    "colors": [
+      "Green",
+      "Black"
+    ],
     "shell_finish": "Matte",
-    "part_numbers": ["X812215-002"],
-    "serial_notes": "Often bundled serials match console batch.",
-    "box_variants": [
-      "Play & Charge Kit bundle box"
+    "part_numbers": [
+      "X801769-037",
+      "X801769-038"
     ],
+    "release_date": "Sept. 4th, 2007",
+    "retail_price": "$59.99",
+    "collector_notes": "Designed by Todd McFarlane. Features Master Chief artwork. First use of black thumbsticks and d-pads.",
+    "images": [],
     "authentication": [
-      "USB charge port fits flush",
-      "Battery pack branding matches controller label"
-    ],
-    "known_fakes": true,
-    "collector_notes": "Frequently confused with standalone black controller.",
-    "images": []
+      "Master Chief artwork on front",
+      "Black thumbsticks and d-pad"
+    ]
   },
   {
-    "id": "chrome-silver-2013",
-    "name": "Wireless Controller – Chrome Silver",
-    "category": "Limited Edition",
-    "rarity": "Rare",
-    "release_year": 2013,
-    "regions": ["NA", "EU"],
-    "connection": "Wireless",
-    "colors": ["Chrome Silver"],
-    "shell_finish": "Chrome",
-    "part_numbers": ["X813985-001"],
-    "serial_notes": "Chrome units have sharper label edges.",
-    "box_variants": [
-      "Chrome Series retail box"
-    ],
-    "authentication": [
-      "Mirror chrome finish (not metallic paint)",
-      "Heavier than standard shell",
-      "Triggers are matte, not chrome"
-    ],
-    "known_fakes": true,
-    "collector_notes": "One of the most counterfeited Chrome Series controllers.",
-    "images": []
-  },
-  {
-    "id": "chrome-red-2014",
-    "name": "Wireless Controller – Chrome Red",
-    "category": "Limited Edition",
-    "rarity": "Rare",
-    "release_year": 2014,
-    "regions": ["NA", "EU"],
-    "connection": "Wireless",
-    "colors": ["Chrome Red"],
-    "shell_finish": "Chrome",
-    "part_numbers": ["X814992-003"],
-    "serial_notes": "Label edges are crisp on genuine units.",
-    "box_variants": [
-      "Chrome Series retail box"
-    ],
-    "authentication": [
-      "True mirror chrome shell",
-      "Weight noticeably heavier than standard",
-      "Consistent trigger spring sound"
-    ],
-    "known_fakes": true,
-    "collector_notes": "Extremely common fake on secondary markets.",
-    "images": []
-  },
-  {
-    "id": "transforming-dpad-2010",
-    "name": "Wireless Controller – Transforming D-Pad",
+    "id": "red-special-edition-2008",
+    "name": "Red Special Edition Wireless Controller",
     "category": "Retail",
     "rarity": "Uncommon",
+    "release_year": 2008,
+    "regions": [
+      "Worldwide"
+    ],
+    "connection": "Wireless",
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "shell_finish": "Matte",
+    "part_numbers": [
+      "X801769-077",
+      "X801769-082",
+      "X817145-008"
+    ],
+    "release_date": "Sep. 30th 2008",
+    "retail_price": "$64.99",
+    "collector_notes": "Bundled with a red Play & Charge kit. Also included in the Resident Evil 5 console bundle.",
+    "images": [],
+    "authentication": [
+      "Red shell with black accents",
+      "Glossy black top trim"
+    ]
+  },
+  {
+    "id": "black-wireless-s-2010",
+    "name": "Black Wireless Controller S",
+    "category": "Retail",
+    "rarity": "Common",
     "release_year": 2010,
-    "regions": ["NA", "EU", "JP"],
+    "regions": [
+      "Worldwide"
+    ],
     "connection": "Wireless",
-    "colors": ["Black"],
-    "shell_finish": "Matte",
-    "part_numbers": ["X815000-001"],
-    "serial_notes": "D-pad twist mechanism should feel firm.",
-    "box_variants": [
-      "Updated retail box"
+    "colors": [
+      "Black"
     ],
+    "shell_finish": "Glossy/Matte",
+    "part_numbers": [
+      "X853164",
+      "X855106-002"
+    ],
+    "release_date": "Jun. 14th, 2010",
+    "retail_price": "$49.99",
+    "collector_notes": "Released with the Xbox 360 Slim. Features a shiny guide button and 'Xbox 360' on the top trim instead of 'Microsoft'.",
+    "images": [],
     "authentication": [
-      "Rotating D-pad locks firmly in both modes",
-      "No rattling when shaken"
-    ],
-    "known_fakes": true,
-    "collector_notes": "First official redesign of the D-pad.",
-    "images": []
+      "Shiny guide button",
+      "'Xbox 360' engraved on top trim"
+    ]
   },
   {
-    "id": "wired-controller-white",
-    "name": "Wired Controller – White",
+    "id": "star-wars-c3po-2012",
+    "name": "Star Wars C-3PO Wireless Controller",
     "category": "Retail",
-    "rarity": "Uncommon",
-    "release_year": 2005,
-    "regions": ["NA", "EU"],
-    "connection": "Wired",
-    "colors": ["White"],
-    "shell_finish": "Matte",
-    "part_numbers": ["X809767-001"],
-    "serial_notes": "Often lacks wireless serial formatting.",
-    "box_variants": [
-      "Wired controller retail box"
+    "rarity": "Rare",
+    "release_year": 2012,
+    "regions": [
+      "Worldwide"
     ],
+    "connection": "Wireless",
+    "colors": [
+      "Gold Chrome"
+    ],
+    "shell_finish": "Chrome",
+    "part_numbers": [
+      "X859621-001"
+    ],
+    "release_date": "Apr. 3rd, 2012",
+    "retail_price": "N/A",
+    "collector_notes": "Star Wars Slim Console bundle only. Features a unique wire pattern on the bottom trim and a transforming d-pad.",
+    "images": [],
     "authentication": [
-      "USB cable has ferrite choke",
-      "Cable strain relief is soft rubber"
-    ],
-    "known_fakes": true,
-    "collector_notes": "Popular for PC use.",
-    "images": []
+      "Gold chrome front",
+      "Wire pattern on bottom trim"
+    ]
   },
   {
-    "id": "prototype-clear-shell",
-    "name": "Wired Prototype – Clear Shell",
-    "category": "Prototype",
+    "id": "k07t-wired-prototype-2004",
+    "name": "Model K07T Wired Prototype",
+    "category": "Prototypes",
     "rarity": "Ultra Rare",
     "release_year": 2004,
-    "regions": ["DEV"],
-    "connection": "Wired",
-    "colors": ["Clear"],
-    "shell_finish": "Transparent",
-    "part_numbers": [],
-    "serial_notes": "No retail serial format.",
-    "box_variants": [],
-    "authentication": [
-      "Exposed PCB",
-      "Non-retail internal layout",
-      "Often no rear label"
+    "regions": [
+      "US"
     ],
-    "known_fakes": false,
-    "collector_notes": "Never sold publicly. Usually from development kits.",
-    "images": []
+    "connection": "Wired",
+    "colors": [
+      "White",
+      "Black"
+    ],
+    "shell_finish": "Matte",
+    "part_numbers": [
+      "K07T-"
+    ],
+    "release_date": "2004",
+    "retail_price": "N/A",
+    "collector_notes": "Resembles a Playstation controller more than an Xbox. Most likely made in early-mid 2004.",
+    "images": [],
+    "authentication": [
+      "'This device has not been approved by the FCC' sticker",
+      "Serial starts with K07T"
+    ]
+  },
+  {
+    "id": "krev-white-wired-prototype-2005",
+    "name": "Model KREV White Wired Prototype",
+    "category": "Prototypes",
+    "rarity": "Ultra Rare",
+    "release_year": 2005,
+    "regions": [
+      "US"
+    ],
+    "connection": "Wired",
+    "colors": [
+      "White",
+      "Black"
+    ],
+    "shell_finish": "Matte",
+    "part_numbers": [
+      "KREV3A2-0743"
+    ],
+    "release_date": "Jan. 28th, 2005",
+    "retail_price": "N/A",
+    "collector_notes": "Features black thumbsticks, a white dpad, and a black cord.",
+    "images": [],
+    "authentication": [
+      "Date on back: Jan. 28th, 2005",
+      "Black thumbsticks and black cord"
+    ]
+  },
+  {
+    "id": "radon-dv1-wireless-prototype-2005",
+    "name": "White/Grey Wireless Radon DV1",
+    "category": "Prototypes",
+    "rarity": "Ultra Rare",
+    "release_year": 2005,
+    "regions": [
+      "US"
+    ],
+    "connection": "Wireless",
+    "colors": [
+      "White",
+      "Grey"
+    ],
+    "shell_finish": "Matte",
+    "part_numbers": [
+      "X802135-001"
+    ],
+    "release_date": "July 2005",
+    "retail_price": "N/A",
+    "collector_notes": "First set of controllers sent out to development teams. Some have a white guide button.",
+    "images": [],
+    "authentication": [
+      "Radon DV1 on sticker",
+      "Part number X802135-001"
+    ]
+  },
+  {
+    "id": "launch-team-green-2005",
+    "name": "Launch White/Green Wireless Controller",
+    "category": "Not Retail",
+    "rarity": "Ultra Rare",
+    "release_year": 2005,
+    "regions": [
+      "Worldwide"
+    ],
+    "connection": "Wireless",
+    "colors": [
+      "White",
+      "Green"
+    ],
+    "shell_finish": "Matte/Glossy",
+    "part_numbers": [
+      "X801769-005"
+    ],
+    "release_date": "Nov. 2005",
+    "retail_price": "N/A",
+    "collector_notes": "Given to MS employees who worked on the Xbox 360 launch. Features a glossy green bottom trim.",
+    "images": [],
+    "authentication": [
+      "Glossy green bottom trim",
+      "Part number ends in -005"
+    ]
+  },
+  {
+    "id": "simpsons-yellow-2007",
+    "name": "Simpsons Yellow Wireless Controller",
+    "category": "Not Retail",
+    "rarity": "Ultra Rare",
+    "release_year": 2007,
+    "regions": [
+      "US"
+    ],
+    "connection": "Wireless",
+    "colors": [
+      "Yellow"
+    ],
+    "shell_finish": "Glossy",
+    "part_numbers": [
+      "N/A"
+    ],
+    "release_date": "July 2007",
+    "retail_price": "N/A",
+    "collector_notes": "Only 100 made for a sweepstakes. Painted by Colorware. Glossy yellow front and back.",
+    "images": [],
+    "authentication": [
+      "Glossy yellow shell",
+      "White start/back buttons"
+    ]
+  },
+  {
+    "id": "live-turns-5-orange-2007",
+    "name": "Live Turn 5 Wireless Controller",
+    "category": "Not Retail",
+    "rarity": "Ultra Rare",
+    "release_year": 2007,
+    "regions": [
+      "Worldwide"
+    ],
+    "connection": "Wireless",
+    "colors": [
+      "Orange",
+      "White"
+    ],
+    "shell_finish": "Metallic",
+    "part_numbers": [
+      "N/A"
+    ],
+    "release_date": "Nov. 2007",
+    "retail_price": "N/A",
+    "collector_notes": "Given to press and Xbox MVPs for the 5th anniversary of Xbox Live. Shiny metallic orange.",
+    "images": [],
+    "authentication": [
+      "'Live Turns 5' logo on front",
+      "Metallic orange finish"
+    ]
+  },
+  {
+    "id": "wired-for-windows-2005",
+    "name": "White/Grey Wired Controller for Windows",
+    "category": "For Windows",
+    "rarity": "Common",
+    "release_year": 2005,
+    "regions": [
+      "Worldwide"
+    ],
+    "connection": "Wired",
+    "colors": [
+      "White",
+      "Grey"
+    ],
+    "shell_finish": "Matte",
+    "part_numbers": [
+      "C8G-00004"
+    ],
+    "release_date": "Nov. 22nd, 2005",
+    "retail_price": "$39.99",
+    "collector_notes": "First 360 controller released for PC. Includes a driver CD and red packaging.",
+    "images": [],
+    "authentication": [
+      "Red blister packaging",
+      "Includes driver disc"
+    ]
   }
 ]

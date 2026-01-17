@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Controller Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0f1115;
+      color: #eaeaea;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 1.5rem;
+      background: #161a22;
+      border-bottom: 1px solid #222;
+    }
+
+    header a {
+      color: #7aa2ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge {
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      background: #222;
+    }
+
+    .badge.rare { background: #7c5cff; }
+    .badge.ultra { background: #ff4d4d; }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid #222;
+      padding-bottom: 0.25rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .warning {
+      background: #2a1a1a;
+      border: 1px solid #ff4d4d;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+
+    .images {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .images img {
+      width: 100%;
+      border-radius: 8px;
+      background: #222;
+    }
+
+    .not-found {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <a href="controllers.html">← Back to controller list</a>
+</header>
+
+<main id="content">
+  <p>Loading controller…</p>
+</main>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const controllerId = params.get("id");
+
+  const content = document.getElementById("content");
+
+  if (!controllerId) {
+    content.innerHTML = `
+      <div class="not-found">
+        <h1>No controller selected</h1>
+        <p>Please open this page from the controller list.</p>
+      </div>
+    `;
+    throw new Error("Missing controller ID");
+  }
+
+  fetch("data/controllers.json")
+    .then(res => res.json())
+    .then(data => {
+      const controller = data.find(c => c.id === controllerId);
+
+      if (!controller) {
+        content.innerHTML = `
+          <div class="not-found">
+            <h1>Controller not found</h1>
+            <p>The requested controller does not exist in the database.</p>
+          </div>
+        `;
+        return;
+      }
+
+      const rarityClass =
+        controller.rarity === "Ultra Rare" ? "ultra" :
+        controller.rarity === "Rare" ? "rare" : "";
+
+      content.innerHTML = `
+        <h1>${controller.name}</h1>
+
+        <div class="meta">
+          <span class="badge ${rarityClass}">${controller.rarity}</span>
+          <span class="badge">${controller.category}</span>
+          <span class="badge">${controller.release_year}</span>
+          <span class="badge">${controller.connection}</span>
+        </div>
+
+        <section>
+          <h2>General Information</h2>
+          <p><strong>Colors:</strong> ${controller.colors.join(", ")}</p>
+          <p><strong>Regions:</strong> ${controller.regions.join(", ")}</p>
+          <p><strong>Shell finish:</strong> ${controller.shell_finish}</p>
+          ${controller.part_numbers.length ? `<p><strong>Part numbers:</strong> ${controller.part_numbers.join(", ")}</p>` : ""}
+          ${controller.serial_notes ? `<p><strong>Serial notes:</strong> ${controller.serial_notes}</p>` : ""}
+        </section>
+
+        ${controller.authentication.length ? `
+        <section>
+          <h2>Authentication Checklist</h2>
+          <ul>
+            ${controller.authentication.map(item => `<li>${item}</li>`).join("")}
+          </ul>
+        </section>` : ""}
+
+        ${controller.collector_notes ? `
+        <section>
+          <h2>Collector Notes</h2>
+          <p>${controller.collector_notes}</p>
+        </section>` : ""}
+
+        ${controller.known_fakes ? `
+        <div class="warning">
+          <strong>⚠ Warning:</strong> This controller is commonly counterfeited.
+        </div>` : ""}
+
+        ${controller.images.length ? `
+        <section>
+          <h2>Images</h2>
+          <div class="images">
+            ${controller.images.map(src => `<img src="${src}" alt="">`).join("")}
+          </div>
+        </section>` : ""}
+      `;
+    })
+    .catch(err => {
+      content.innerHTML = `
+        <div class="not-found">
+          <h1>Error loading controller</h1>
+          <p>Check your JSON file path and syntax.</p>
+        </div>
+      `;
+      console.error(err);
+    });
+</script>
+</body>
+</html>

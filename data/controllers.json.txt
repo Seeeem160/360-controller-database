@@ -1,0 +1,190 @@
+[
+  {
+    "id": "white-wireless-2005",
+    "name": "Wireless Controller – White",
+    "category": "Retail",
+    "rarity": "Common",
+    "release_year": 2005,
+    "regions": ["NA", "EU", "JP"],
+    "connection": "Wireless",
+    "colors": ["White"],
+    "shell_finish": "Matte",
+    "part_numbers": ["X810648-001"],
+    "serial_notes": "Early launch units have larger serial font.",
+    "box_variants": [
+      "Launch retail box",
+      "Later retail box"
+    ],
+    "authentication": [
+      "Matte white shell, never glossy",
+      "Embossed Microsoft logo is clean and centered",
+      "Rear label font is thin and evenly spaced"
+    ],
+    "known_fakes": true,
+    "collector_notes": "Most common Xbox 360 controller. Early units feel slightly heavier.",
+    "images": []
+  },
+  {
+    "id": "black-wireless-2006",
+    "name": "Wireless Controller – Black",
+    "category": "Retail",
+    "rarity": "Common",
+    "release_year": 2006,
+    "regions": ["NA", "EU", "JP"],
+    "connection": "Wireless",
+    "colors": ["Black"],
+    "shell_finish": "Matte",
+    "part_numbers": ["X811903-001"],
+    "serial_notes": "Serial font standardized after 2006.",
+    "box_variants": [
+      "Retail black box"
+    ],
+    "authentication": [
+      "Deep matte black shell",
+      "Triggers have consistent spring resistance",
+      "Battery compartment plastic is slightly textured"
+    ],
+    "known_fakes": true,
+    "collector_notes": "Second most common retail controller.",
+    "images": []
+  },
+  {
+    "id": "play-charge-black",
+    "name": "Wireless Controller – Black (Play & Charge Bundle)",
+    "category": "Retail",
+    "rarity": "Uncommon",
+    "release_year": 2007,
+    "regions": ["NA", "EU"],
+    "connection": "Wireless",
+    "colors": ["Black"],
+    "shell_finish": "Matte",
+    "part_numbers": ["X812215-002"],
+    "serial_notes": "Often bundled serials match console batch.",
+    "box_variants": [
+      "Play & Charge Kit bundle box"
+    ],
+    "authentication": [
+      "USB charge port fits flush",
+      "Battery pack branding matches controller label"
+    ],
+    "known_fakes": true,
+    "collector_notes": "Frequently confused with standalone black controller.",
+    "images": []
+  },
+  {
+    "id": "chrome-silver-2013",
+    "name": "Wireless Controller – Chrome Silver",
+    "category": "Limited Edition",
+    "rarity": "Rare",
+    "release_year": 2013,
+    "regions": ["NA", "EU"],
+    "connection": "Wireless",
+    "colors": ["Chrome Silver"],
+    "shell_finish": "Chrome",
+    "part_numbers": ["X813985-001"],
+    "serial_notes": "Chrome units have sharper label edges.",
+    "box_variants": [
+      "Chrome Series retail box"
+    ],
+    "authentication": [
+      "Mirror chrome finish (not metallic paint)",
+      "Heavier than standard shell",
+      "Triggers are matte, not chrome"
+    ],
+    "known_fakes": true,
+    "collector_notes": "One of the most counterfeited Chrome Series controllers.",
+    "images": []
+  },
+  {
+    "id": "chrome-red-2014",
+    "name": "Wireless Controller – Chrome Red",
+    "category": "Limited Edition",
+    "rarity": "Rare",
+    "release_year": 2014,
+    "regions": ["NA", "EU"],
+    "connection": "Wireless",
+    "colors": ["Chrome Red"],
+    "shell_finish": "Chrome",
+    "part_numbers": ["X814992-003"],
+    "serial_notes": "Label edges are crisp on genuine units.",
+    "box_variants": [
+      "Chrome Series retail box"
+    ],
+    "authentication": [
+      "True mirror chrome shell",
+      "Weight noticeably heavier than standard",
+      "Consistent trigger spring sound"
+    ],
+    "known_fakes": true,
+    "collector_notes": "Extremely common fake on secondary markets.",
+    "images": []
+  },
+  {
+    "id": "transforming-dpad-2010",
+    "name": "Wireless Controller – Transforming D-Pad",
+    "category": "Retail",
+    "rarity": "Uncommon",
+    "release_year": 2010,
+    "regions": ["NA", "EU", "JP"],
+    "connection": "Wireless",
+    "colors": ["Black"],
+    "shell_finish": "Matte",
+    "part_numbers": ["X815000-001"],
+    "serial_notes": "D-pad twist mechanism should feel firm.",
+    "box_variants": [
+      "Updated retail box"
+    ],
+    "authentication": [
+      "Rotating D-pad locks firmly in both modes",
+      "No rattling when shaken"
+    ],
+    "known_fakes": true,
+    "collector_notes": "First official redesign of the D-pad.",
+    "images": []
+  },
+  {
+    "id": "wired-controller-white",
+    "name": "Wired Controller – White",
+    "category": "Retail",
+    "rarity": "Uncommon",
+    "release_year": 2005,
+    "regions": ["NA", "EU"],
+    "connection": "Wired",
+    "colors": ["White"],
+    "shell_finish": "Matte",
+    "part_numbers": ["X809767-001"],
+    "serial_notes": "Often lacks wireless serial formatting.",
+    "box_variants": [
+      "Wired controller retail box"
+    ],
+    "authentication": [
+      "USB cable has ferrite choke",
+      "Cable strain relief is soft rubber"
+    ],
+    "known_fakes": true,
+    "collector_notes": "Popular for PC use.",
+    "images": []
+  },
+  {
+    "id": "prototype-clear-shell",
+    "name": "Wired Prototype – Clear Shell",
+    "category": "Prototype",
+    "rarity": "Ultra Rare",
+    "release_year": 2004,
+    "regions": ["DEV"],
+    "connection": "Wired",
+    "colors": ["Clear"],
+    "shell_finish": "Transparent",
+    "part_numbers": [],
+    "serial_notes": "No retail serial format.",
+    "box_variants": [],
+    "authentication": [
+      "Exposed PCB",
+      "Non-retail internal layout",
+      "Often no rear label"
+    ],
+    "known_fakes": false,
+    "collector_notes": "Never sold publicly. Usually from development kits.",
+    "images": []
+  }
+]

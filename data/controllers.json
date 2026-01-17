@@ -389,5 +389,80 @@
       "Red blister packaging",
       "Includes driver disc"
     ]
-  }
+  },
+  {
+        "id": "white-silver-trim-2005",
+        "name": "Dark-Silver trim - White Wireless Controller",
+        "category": "Retail",
+        "rarity": "Common",
+        "release_year": 2005,
+        "image": "https://lh3.googleusercontent.com/sitesv/AAzXCkf708_8OyuS9AN7tq4RziN8jsk_IwzogKZ8kEdVUsv1QXacctB_c__InpIIe-Gvt8a4ppCwIunZ-FVLfOaE7hbK0vTlh0OiQbJ0fMzWeDCwy8sD10i9uTNHEVgSt692_RIrmlTbXzmwwHirdYt9bkJRXwFQqMtA=w16383",
+        "description": "The very first wireless controller released. Features a glossy dark-silver trim instead of the later matte grey.",
+        "details": {
+            "Release Date": "Nov. 22nd, 2005",
+            "Regions": "Worldwide",
+            "Retail Price": "$49.99",
+            "Part Numbers": "X801769-004, X801769-006, X806498-003"
+        }
+    },
+    {
+        "id": "white-grey-wireless-2005",
+        "name": "White/Grey Wireless Controller",
+        "category": "Retail",
+        "rarity": "Common",
+        "release_year": 2005,
+        "image": "https://lh3.googleusercontent.com/sitesv/AAzXCkfzbJxLaSfn_oUu1Uy0dWmZommU_aWiIjdbjEiFkuEsD4tUgynGmXZ0gMwhAzZCeHGRNz-7w1TQSKRGXs_MwbdF-v7dVXbAS8kLZs36gz3vvfKwXd3lFOw94VY_Md-SroOroBSqm8GVwdoTFrSmpAItXrgQwqRUfUEq1UH5_bUFPzwe_com7exDnNV61D1U0C-GTc_9F-GZJMg=w1280",
+        "description": "The standard original release controller with matte grey accents.",
+        "details": {
+            "Release Date": "Nov. 22nd, 2005",
+            "Regions": "Worldwide",
+            "Retail Price": "$49.99",
+            "Part Numbers": "X807968-001, X809478-001, X801769-007"
+        }
+    },
+    {
+        "id": "elite-black-wireless-2007",
+        "name": "Elite Black Wireless Controller",
+        "category": "Retail",
+        "rarity": "Common",
+        "release_year": 2007,
+        "image": "https://lh3.googleusercontent.com/sitesv/AAzXCkdLmumqGIeRR5GHz8nm8nSpPwp6rEXIoBlJflXy8cVp4zlZI7Mrrp8-omQXG5L9l5QOxAPbx_sqJltHxt-EmOqKeiP3D5iet4IwTy4TQav7dJbeOSVgWws2XvzmVnpXCQz0suJmdxZXVvEbi8v6ytQ4YQiFoPjd05l3JHaLiozwH5LmYmzEVAu1KvFw5U-ZOv4nNsYNc_nJ=w1280",
+        "description": "Released alongside the Xbox 360 Elite console. Features a matte black finish.",
+        "details": {
+            "Release Date": "Apr. 29th, 2007",
+            "Regions": "Worldwide",
+            "Retail Price": "$49.99",
+            "Part Numbers": "X811616-001, X811616-003"
+        }
+    },
+    {
+        "id": "halo-3-spartan-2007",
+        "name": "Halo 3 Spartan Limited Edition",
+        "category": "Retail",
+        "rarity": "Uncommon",
+        "release_year": 2007,
+        "image": "https://lh3.googleusercontent.com/sitesv/AAzXCkcumj_exyFnas_uo5MpF6kq11EL6AvUjxfJX2bzH6fH653mn9inrlrKHdAkMgHbvbxfBLSIpzlaesRxlVl-g97Dq83_8OyuS9AN7tq4RziN8jsk_IwzogKZ8kEdVUsv1QXacctB_c__InpIIe-Gvt8a4ppCwIunZ-FVLfOaE7hbK0vTlh0OiQbJ0fMzWeDCwy8sD10i9uTNHEVgSt692_RIrmlTbXzmwwHirdYt9bkJRXwFQqMtA=w16383",
+        "description": "Features custom Halo 3 artwork by Todd McFarlane. Part of the Halo 3 launch promotion.",
+        "details": {
+            "Release Date": "Sept. 2007",
+            "Regions": "Worldwide",
+            "Retail Price": "$59.99",
+            "Part Numbers": "X811616-008"
+        }
+    },
+    {
+        "id": "star-wars-c3po-2012",
+        "name": "Star Wars C-3PO Wireless Controller",
+        "category": "Retail",
+        "rarity": "Rare",
+        "release_year": 2012,
+        "image": "https://lh3.googleusercontent.com/sitesv/AAzXCkewyvW_WvY69956Xv989_JhgRzAkFpgFk3l7lu9OLhxtFO8XnyyGuvwYU8qnkTHOpXal_K5cj1E9l37oNF1ZCPRVAns_DL-zwyguRSOwNsAcx0hImA4Q8205aOaxVygMy49lMAZLTd5Zz4Tn8ixhLuyZ6IuA7m1NRxsB2lAUgNLGpBvwus66fP75sz8YYuMklWHQWGK_GOqk=w1280",
+        "description": "Gold chrome front with special wire pattern on the bottom trim. Sold only with the Star Wars console bundle.",
+        "details": {
+            "Release Date": "Apr. 3rd, 2012",
+            "Regions": "Worldwide",
+            "Sold As": "Console Bundle Only",
+            "Part Numbers": "X859621-001"
+        }
+    }
 ]

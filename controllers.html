@@ -1,121 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controller Details - 360 Controller Database</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controller Details | 360 Controller DB</title>
+    
     <style>
-        body { background-color: #1a1a1a; color: #ffffff; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0f1115;
+            color: #eaeaea;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 1.5rem;
+            background: #161a22;
+            border-bottom: 1px solid #222;
+        }
+
+        header a {
+            color: #7aa2ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .badge {
+            padding: 0.35rem 0.7rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: #2a2f3a;
+            color: #fff;
+        }
+
+        .badge.rare { background: #6200ea; }
+        .badge.ultra { background: #d50000; }
+        .badge.retail { background: #1b5e20; }
+
+        section {
+            background: #161a22;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid #222;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #7aa2ff;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .info-item label {
+            display: block;
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-item span {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .notes {
+            line-height: 1.7;
+            color: #ccc;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .not-found {
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 5rem 1rem;
+            font-size: 1.2rem;
+            color: #888;
+        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col">
-    <header class="bg-green-600 py-4 shadow-lg">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold">360 Controller DB</a>
-            <a href="index.html" class="bg-green-700 hover:bg-green-800 px-4 py-2 rounded text-sm transition">Back to Home</a>
-        </div>
-    </header>
+<body>
 
-    <main class="container mx-auto px-4 py-12 flex-grow">
-        <div id="details-container" class="max-w-4xl mx-auto">
-            <div class="text-center py-12">
-                <p class="text-gray-400 animate-pulse">Loading details...</p>
-            </div>
-        </div>
-    </main>
+<header>
+    <a href="index.html">← Back to Database</a>
+</header>
 
-    <footer class="bg-gray-900 py-8 mt-12 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-500">&copy; 2026 Xbox 360 Controller Database</p>
-            <p class="text-green-500 font-bold mt-2">Created by Seeeem</p>
-        </div>
-    </footer>
+<main id="content">
+    <div class="loading">Loading controller details...</div>
+</main>
 
-    <script>
-        async function loadDetails() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const id = urlParams.get('id');
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const controllerId = params.get('id');
+    const content = document.getElementById("content");
 
-            if (!id) {
-                window.location.href = 'index.html';
+    async function loadController() {
+        if (!controllerId) {
+            content.innerHTML = `
+                <div class="not-found">
+                    <h1>No Controller Selected</h1>
+                    <p>Please go back to the <a href="index.html" style="color: #7aa2ff;">homepage</a> to select a controller.</p>
+                </div>
+            `;
+            return;
+        }
+
+        try {
+            const response = await fetch('data/controllers.json');
+            const data = await response.json();
+            const controller = data.find(c => c.id === controllerId);
+
+            if (!controller) {
+                content.innerHTML = `
+                    <div class="not-found">
+                        <h1>Controller Not Found</h1>
+                        <p>The requested controller ID "${controllerId}" does not exist in our database.</p>
+                        <a href="index.html" style="color: #7aa2ff;">Return to Home</a>
+                    </div>
+                `;
                 return;
             }
 
-            try {
-                const response = await fetch('data/controllers.json');
-                const controllers = await response.json();
-                const controller = controllers.find(c => c.id === id);
+            document.title = `${controller.name} | 360 Controller DB`;
 
-                if (!controller) {
-                    document.getElementById('details-container').innerHTML = `
-                        <div class="text-center py-12">
-                            <h2 class="text-2xl font-bold text-red-500">Controller Not Found</h2>
-                            <a href="index.html" class="text-green-400 hover:underline mt-4 block">Return to Home</a>
+            content.innerHTML = `
+                <h1>${controller.name}</h1>
+                <div class="meta">
+                    <span class="badge ${controller.rarity.toLowerCase().includes('rare') ? 'rare' : ''}">${controller.rarity}</span>
+                    <span class="badge retail">${controller.category}</span>
+                    <span class="badge">${controller.release_year}</span>
+                    <span class="badge">${controller.connection}</span>
+                </div>
+
+                <section>
+                    <h2>General Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Colors</label>
+                            <span>${controller.colors.join(', ')}</span>
                         </div>
-                    `;
-                    return;
-                }
-
-                displayDetails(controller);
-            } catch (error) {
-                console.error('Error loading details:', error);
-            }
-        }
-
-        function displayDetails(c) {
-            const container = document.getElementById('details-container');
-            container.innerHTML = `
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div class="bg-gray-800 rounded-2xl p-8 flex items-center justify-center shadow-2xl border border-gray-700">
-                        <img src="${c.image}" alt="${c.name}" class="max-w-full h-auto object-contain rounded-lg"
-                             onerror="this.src='https://via.placeholder.com/600x400?text=No+Image+Available'">
-                    </div>
-                    <div>
-                        <h1 class="text-4xl font-bold text-green-400 mb-2">${c.name}</h1>
-                        <div class="flex items-center gap-4 mb-6">
-                            <span class="bg-gray-800 px-3 py-1 rounded text-sm text-gray-300">${c.year}</span>
-                            <span class="text-sm font-bold uppercase tracking-widest ${getRarityClass(c.rarity)}">${c.rarity}</span>
+                        <div class="info-item">
+                            <label>Regions</label>
+                            <span>${controller.regions.join(', ')}</span>
                         </div>
-                        
-                        <div class="bg-gray-800 rounded-xl p-6 mb-8 border border-gray-700">
-                            <h3 class="text-gray-400 text-xs font-bold uppercase tracking-widest mb-4">Specifications</h3>
-                            <div class="space-y-3">
-                                ${Object.entries(c.details || {}).map(([key, value]) => `
-                                    <div class="flex justify-between border-b border-gray-700 pb-2">
-                                        <span class="text-gray-400 text-sm">${key}</span>
-                                        <span class="text-sm font-medium">${value}</span>
-                                    </div>
-                                `).join('')}
-                                <div class="flex justify-between pt-2">
-                                    <span class="text-gray-400 text-sm">Part Number</span>
-                                    <span class="text-sm font-mono text-green-400">${c.part_number || 'N/A'}</span>
-                                </div>
-                            </div>
+                        <div class="info-item">
+                            <label>Shell Finish</label>
+                            <span>${controller.shell_finish}</span>
                         </div>
-
-                        <div class="prose prose-invert">
-                            <h3 class="text-gray-400 text-xs font-bold uppercase tracking-widest mb-2">Collector Notes</h3>
-                            <p class="text-gray-300 leading-relaxed">${c.description || 'No additional notes available for this controller.'}</p>
+                        <div class="info-item">
+                            <label>Release Date</label>
+                            <span>${controller.release_date}</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Retail Price</label>
+                            <span>${controller.retail_price}</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Part Numbers</label>
+                            <span>${controller.part_numbers.join(', ')}</span>
                         </div>
                     </div>
+                </section>
+
+                <section>
+                    <h2>Collector Notes</h2>
+                    <p class="notes">${controller.collector_notes}</p>
+                </section>
+
+                ${controller.authentication && controller.authentication.length > 0 ? `
+                <section>
+                    <h2>Authentication Checklist</h2>
+                    <ul>
+                        ${controller.authentication.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </section>
+                ` : ''}
+            `;
+        } catch (error) {
+            console.error('Error:', error);
+            content.innerHTML = `
+                <div class="not-found">
+                    <h1>Error Loading Data</h1>
+                    <p>There was a problem loading the controller database. Please check your internet connection.</p>
                 </div>
             `;
         }
+    }
 
-        function getRarityClass(rarity) {
-            if (!rarity) return 'text-gray-400';
-            switch(rarity.toLowerCase()) {
-                case 'common': return 'text-blue-400';
-                case 'uncommon': return 'text-green-400';
-                case 'rare': return 'text-yellow-400';
-                case 'very rare': return 'text-orange-400';
-                case 'ultra rare': return 'text-red-400';
-                default: return 'text-gray-400';
-            }
-        }
+    window.onload = loadController;
+</script>
 
-        loadDetails();
-    </script>
 </body>
 </html>
